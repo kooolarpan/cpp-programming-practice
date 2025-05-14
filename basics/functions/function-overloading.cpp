@@ -1,18 +1,21 @@
 #include <iostream>
 using namespace std;
-void number(int a, int b){
-    cout<<a+b<<endl;
+
+void functionOverloading(int firstNumber, int secondNumber){
+    cout<<"Sum: "<<firstNumber+secondNumber<<endl;
 }
-void number(int a){
-    cout<<a<<endl;
+
+void functionOverloading(int number){
+    cout<<"Prints Number: "<<number<<endl;
 }
-void number(char a){
-    cout<<a<<endl;
+
+void functionOverloading(string name){
+    cout<<"Prints Character: "<<name<<endl;
 }
 
 int main(){
-    number(2,5);
-    number(6);
-    number('A');
+    functionOverloading(2,5);
+    functionOverloading(6);
+    functionOverloading("Arpan");
     return 0;
 }
