@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+/*
+Access Specifiers              Within Same Class           Child Class             Outside Class
+private                             yes                         no                      no
+protected                           yes                         yes                     no
+public                              yes                         yes                     yes
+*/
+
+
 class Teacher {
     int teacherId;
     string subject;
