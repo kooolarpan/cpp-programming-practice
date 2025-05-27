@@ -1,0 +1,86 @@
+Inheritance
+
+Types of Inheritance
+1. Single Inheritance
+2. Multiple Inheritance
+3. Multi-level Inheritance
+4. Hierarchial Inheritance
+5. Hybrid (Multi-path) Inheritance
+
+
+1. Single Inheritance
+    Parent - A
+    Child - B
+
+    General Formmat:
+    class A{
+
+    };
+    class B:public A{
+
+    };
+
+2. Multiple Inheritance
+    Parent -  A B
+    Child - C
+
+    General Formmat:
+    class A{
+
+    };
+    class B{
+
+    };
+    class C:public A, public B{
+
+    };
+
+3. Multi-level Inheritance
+    Parent - A
+    Child of A and Parent of B - B
+    Child of B - C
+
+    General Formmat:
+    class A{
+
+    };
+    class B:public A{
+
+    };
+    class C:public B{
+
+    };
+
+4. Hierarchial Inheritance
+    Parent - A
+    Child - B and C
+
+    General Formmat:
+    class A{
+
+    };
+    class B:public A{
+
+    };
+    class C:public A{
+
+    };
+
+5. Hybrid (Multi-path) Inheritance
+    Parent - A 
+    Child of A - B and C 
+    Child of B and C - D
+
+    General Format:
+    class A{
+
+    };
+    class B:public A{
+
+    };
+    class C:public A{
+
+    };
+    class D: public B, public C{
+        
+    };
