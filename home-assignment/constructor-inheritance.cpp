@@ -1,6 +1,6 @@
 /*
 Use constructors to initalize the data members.
-Define members function named ShowData() in each class to display the
+Define members function named showData() in each class to display the
 information. Create two objects of Hero class and dislay the info
 
 
@@ -17,7 +17,7 @@ class Batman {
 
    public:
     Batman(int p) { power = p; }
-    void display() { cout << "Batman's Power: " << power << endl; }
+    void showData() { cout << "Batman's Power: " << power << endl; }
 };
 
 class Superman {
@@ -25,23 +25,28 @@ class Superman {
 
    public:
     Superman(int s) { strength = s; }
-    void display() { cout << "Superman's Strength: " << strength << endl; }
+    void showData() { cout << "Superman's Strength: " << strength << endl; }
 };
 
 class Hero : public Batman, public Superman {
     int life;
-    public:
-    Hero(int p, int s, int l):Batman(p),Superman(s){
-        life = l;
-    }
-    void display() { cout << "Hero's Life: " << life << endl; }
 
+   public:
+    Hero(int p, int s, int l) : Batman(p), Superman(s) { life = l; }
+    void showData() { cout << "Hero's Life: " << life << endl; }
 };
 
 int main() {
-    Hero h(5,6,10);
-    h.Batman::display();
-    h.Superman::display();
-    h.display();
+    Hero firstHero(5, 6, 10), secondHero(3, 6, 8);
+
+    cout << "\nFirst Hero Info: \n";
+    firstHero.Batman::showData();
+    firstHero.Superman::showData();
+    firstHero.showData();
+    cout << "\nSecond Hero Info: \n";
+    secondHero.Batman::showData();
+    secondHero.Superman::showData();
+    secondHero.showData();
+
     return 0;
 }
