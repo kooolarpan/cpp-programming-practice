@@ -1,5 +1,4 @@
 /*
-
            Person
             name
             address
@@ -12,10 +11,12 @@ Student                   Teacher
  percentage                subject
 
 
- Define necessary member functions to initalize data members.
- Define a member function display() in each class to displlay information.
- Create objects of Student & Teacher class in main() & display the information.
- */
+Define necessary member functions to initalize data members.
+Define a member function display() in each class to display information.
+Create objects of Student & Teacher class in main() & display the information.
+
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -25,9 +26,9 @@ class Person {
    public:
     void getPerson() {
         cout << "Enter Name: ";
-        cin >> name;
+        getline(cin, name);
         cout << "Enter Address: ";
-        cin >> address;
+        getline(cin, address);
     }
     void display() {
         cout << "Name: " << name << endl;
@@ -60,8 +61,9 @@ class Teacher : public Person {
     void getTeacher() {
         cout << "Enter Teacher's ID: ";
         cin >> id;
+        cin.ignore();
         cout << "Enter Teacher's Subject: ";
-        cin >> subject;
+        getline(cin, subject);
     }
     void display() {
         cout << "Teacher's ID: " << id << endl;
