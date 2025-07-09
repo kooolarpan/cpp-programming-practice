@@ -5,20 +5,23 @@ class Parent{
     int num;
     public:
   Parent(){
-        cout << "Enter a numher: ";
+        cout << "Enter a number: ";
         cin >> num;
     }
     void display(){
         cout<<"Number: "<<num<<endl;
     }
     void operator==(Parent b){
-        num == b.num;
+        if(num == b.num){
+            cout << "The numbers are equal!"<<endl;
+        }else{
+            cout << "The numbers are not equal!"<<endl;
+        }
     }
 };
 
 int main(){
     Parent a,b;
     a==b;
-    a.display();
     return 0;
 }
