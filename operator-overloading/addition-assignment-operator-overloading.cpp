@@ -5,7 +5,7 @@ class Parent{
     int num;
     public:
   Parent(){
-        cout << "Enter a numher: ";
+        cout << "Enter a number: ";
         cin >> num;
     }
     void display(){
